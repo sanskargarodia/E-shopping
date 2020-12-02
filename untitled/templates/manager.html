@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MANAGER</title>
+	<style>
+		td{
+			padding: 0 100px;
+			font-family: arial;
+			font-size: 20px;
+		}
+		th{
+			background-color: black;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+<table class="table">
+  <thead class="black white-text">
+    <tr>
+      <th scope="col">Store_Id</th>
+      <th scope="col">Product_Id</th>
+      <th scope="col">Quantity</th>
+    </tr>
+  </thead>
+  {% for item in data %}
+  <tbody>
+    <tr>
+      <td>{{ item[0] }}</td>
+      <td>{{ item[1] }}</td>
+      <td>{{ item[2] }}</td>
+    </tr>
+  </tbody>
+  {% endfor %}
+</table>
+<form action="/manager_order" method="post">
+  <button type="submit" class="btn btn-black">Order Stock</button>
+</form>
+
+
+
+</body>
+</html>

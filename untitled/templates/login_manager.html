@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login/SignUp</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+<link rel="stylesheet" href="../static/login.css">
+
+</head>
+<body>
+	<div class="sidenav">
+	         <div class="login-main-text">
+	            <h2>Application<br> Login Page</h2>
+	            <p>Login or register from here to access.</p>
+	         </div>
+	</div>
+	<div class="main">
+	    <div class="col-md-6 col-sm-12">
+	        <div class="login-form">
+	            <form action="/login_manager" method="post">
+	                <div class="form-group">
+	                    <label>Emp ID</label>
+	                    <input type="text" name = "empid" class="form-control" placeholder="Emp ID">
+	                </div>
+	                <div class="form-group">
+	                    <label>Password</label>
+	                     <input type="password" name = "Emp_Password" class="form-control" placeholder="Password">
+	                </div>
+	                <button type="submit" class="btn btn-black">Login</button>
+	                <a href="/signup_manager" class="btn btn-primary">Register</a>
+	            </form>
+	        </div>
+	    </div>
+	</div>
+
+</body>
+</html>

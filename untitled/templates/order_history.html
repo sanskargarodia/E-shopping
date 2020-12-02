@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shopping Cart</title>
+
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+</head>
+<body>
+<div style="background-image: url('../static/fruit3.jpg');">
+<h1 class="text-center" style="color:#ffff00;"><strong>ORDER HISTORY</strong></h1><br><br>
+{% for item in data %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-10 col-md-offset-1">
+            <table class="table table-hover" style="background-color:#C0c0c0">
+                <tr>
+                <td><h4>Order Id:- <strong>{{item[0]}}</strong></h4><br></td>
+                <td><h4>Bill Value :- <strong>{{item[3]}}</strong></h4><br></td>
+                <td><h4>Delivery Status:-  <strong>{{item[4]}}</strong></h4><br></td>
+                </tr>
+					<tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th class="text-center">Quantity</th>
+                        <th class="text-center">Total</th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for item1 in data1 %}
+                {% if item[0] == item1[0] %}
+                    <tr  border: 1px solid black;>
+                        <th>{{item1[6]}}</th>
+                        <th>{{item1[2]}}</th>
+                        <th class="text-center">{{item1[3]}}</th>
+                        <th class="text-center">{{item1[4]}}</th>
+                        <th> </th>
+                    </tr>
+                {% endif %}
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+{% endfor %}
+</div>
+</body>
+</html>

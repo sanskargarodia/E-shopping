@@ -1,0 +1,81 @@
+
+.navbar{
+	background-color: black;
+	border:solid black;
+	border-radius: 0px;
+	margin-bottom: 0px;
+}
+.dropdown .dropdown-menu{
+	display:none;
+}
+.dropdown:hover .dropdown-menu{
+	display:block;
+	margin-top:0;
+}
+
+.carousel-inner{
+	margin-top: 0px;
+	min-width:cover;
+	max-height:30vw;
+}
+
+header{
+	display: inline-block;
+	float: left;
+	margin-left: 20px;
+}
+svg{
+	margin: 0px 0px 0px 0px;
+}
+
+#map {margin-left: 20px;padding: 0;width: 500px;height: 500px;}
+
+.SignUp{
+	display: block;
+	font-size: 30px;
+	margin-left: 30%;
+}
+#heading{
+	color: blue;
+	font-size: 60px;
+	margin-left:30%;
+	font-family: aria;	
+}
+#Login{
+	margin-top: 1%;
+	font-size: 150%;
+	margin-left: 30%;
+}
+#SignUp{
+	margin-top: 1%;
+	font-size: 150%;
+	margin-left: 5%;
+}
+
+.shopping-cart{
+	font-size: 25px;
+	margin-top: 5px;
+	float: right;
+	margin-right: -1.6%;
+}
+
+#imagebutton{
+	width: 22%;
+	height:300px;
+	margin-top: 20px;
+	margin-right: 10px;
+	margin-left: 10px;
+	float: left;
+	display: inline-block;
+}
+
+.ImageButton{
+	display: inline-block;
+	float: left;
+}
+
+.ss{
+    display: inline-flex;
+    padding-right: 10px;
+    margin-right: 10px;
+  }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PLACE ORDER</title>
+</head>
+<body>
+<table class="table">
+  <thead class="black white-text">
+    <tr>
+      <th scope="col">Store Id</th>
+      <th scope="col">Store Name</th>
+      <th scope="col">Store Location</th>
+    </tr>
+  </thead>
+  {% for item in data %}
+  <tbody>
+    <tr>
+      <td>{{ item[0] }}</td>
+      <td>{{ item[1] }}</td>
+      <td>{{ item[2] }}</td>
+    </tr>
+  </tbody>
+  {% endfor %}
+</table>
+<form action="/managerplaceorder" method="post">
+  <button type="submit" class="btn btn-black">Choose Store</button>
+
+
+ <table class="table">
+  <thead class="black white-text">
+    <tr>
+      <th scope="col">Trader Id</th>
+      <th scope="col">Trader Name</th>
+      <th scope="col">Trader Location</th>
+    </tr>
+  </thead>
+  {% for item in dat1 %}
+  <tbody>
+    <tr>
+      <td>{{ item[0] }}</td>
+      <td>{{ item[1] }}</td>
+      <td>{{ item[2] }}</td>
+    </tr>
+  </tbody>
+  {% endfor %}
+</table>
+<form action="/managerplaceorder" method="post">
+  <button type="submit" class="btn btn-black">Choose trader</button>
+</form>
+</form>
+</body>
+</html>

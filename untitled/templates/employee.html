@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee</title>
+	<style>
+		td{
+			padding: 0 100px;
+			font-family: arial;
+			font-size: 20px;
+		}
+		th{
+			background-color: black;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+<H1 class="text-center">Welcome</H1>
+<H3 class="text-center">Please Deliver Some Orders</H3>
+
+<table class="table">
+  <thead class="black white-text">
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Order id</th>
+      <th scope="col">Bill Value</th>
+    </tr>
+  </thead>
+  <form action="/deliver_order" method="post">
+  {% for item in data %}
+  <tbody>
+    <tr>
+      <td><input type="radio" id="{{item[0]}}" name="orderid" value="{{item[0]}}"><label for="{{item[0]}}"></label></td>
+      <td>{{ item[0] }}</td>
+      <td>{{ item[3] }}</td>
+    </tr>
+  </tbody>
+  {% endfor %}
+    <tr>
+      <td>
+  <button type="submit" class="btn btn-black">Deliver Order</button>
+      </td></tr>
+  </form>
+</table>
+</body>
+</html>

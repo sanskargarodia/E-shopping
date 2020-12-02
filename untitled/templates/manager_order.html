@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Order Stock</title>
+</head>
+<body>
+	<div style="background-image: url('../static/fruit3.jpg');opacity: 1;">
+	<h1 style="text-align: center;color: #ffff00; font-family: arial;size: 40px;">ORDER STOCK</h1>
+<form action="/manager_order1" method="post" class="form-control">
+<table class="table table-hover"style="background-color:#C0c0c0; padding-right: 20px;">
+	<tr>
+		<th></th>
+		<th>PRODUCT ID</th>
+		<td>
+	&nbsp;
+</td>
+		<th>PRODUCT NAME</th>
+	</tr>
+	{% for item in data %}
+	<tr>
+		<td>
+		<input type="radio" class="product" name="checkboxes" value="{{ item[0] }}">
+	</td>
+	<td>
+		<label>{{ item[0] }}</label>
+	</td>
+	<td>
+	&nbsp;
+</td>
+	<td>
+	<label>{{ item[1] }}</label>
+	</td>
+	</tr>
+		{% endfor %}
+	</table>
+<div class="form-control">
+
+<br>
+<table class="table table-hover" style="background-color:#C0c0c0; padding-right: 20px;">
+	<tr>
+		<th></th>
+		<th>TRADER ID</th>
+		<td>
+	&nbsp;
+</td>
+		<th>TRADER NAME</th>
+	</tr>
+{% for item in data2 %}
+<tr>
+	<td>
+<input type="radio" class="product" name="traderid" value="{{ item[0] }}">
+</td>
+<td>
+<label>{{ item[0] }}</label>
+</td>
+<td>
+	&nbsp;
+</td>
+<td>
+<label>{{ item[1] }}</label>
+</td>
+</tr>
+<br>
+{% endfor %}
+</table>
+<br>
+<br>
+
+
+<label style="background-color:#C0c0c0; padding-right: 20px;">Quantity</label>
+<input type="number" name="quantity" class="form-control">
+<input type="submit" value="Order">
+</div>
+</form>
+</body>
+</html>
